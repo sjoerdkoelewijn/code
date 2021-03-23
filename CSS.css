@@ -1,0 +1,17 @@
+// CSS Clamp
+
+h1 {
+  font-size: clamp(
+    24px,     // min
+    5vw,     // value
+    48px  // max
+  );
+}
+
+// Center with flexbox
+
+.box {
+  display: flex;
+  align-items: center;  // vertical center
+  justify-content: center; // horizontal center
+}
