@@ -15,3 +15,11 @@ h1 {
   align-items: center;  // vertical center
   justify-content: center; // horizontal center
 }
+
+
+// Use a SVG as a mask. Great for changing the color of single color icons
+
+.mask {
+  mask: url(mask.svg);
+  background:red:
+}
