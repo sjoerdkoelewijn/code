@@ -22,7 +22,11 @@ mainClose.forEach(function(elem) {
 
 --------------------
 
-const item1 = document.getElementById("item_1");
+var x = document.getElementById('example');
+
+var x = document.getElementsByClassName('example');
+
+var x = document.querySelector('[data-example]');
 
 --------------------
 
