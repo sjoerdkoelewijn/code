@@ -1,0 +1,8 @@
+&:after {
+  content: '';
+  mask:url(../images/svg/dropdown-icon.svg) no-repeat;
+  -webkit-mask:url(../images/svg/dropdown-icon.svg) no-repeat;
+  background-color:var(--heading-color);
+  width:20px;
+  height:20px;
+}
