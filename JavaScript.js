@@ -22,6 +22,12 @@ mainClose.forEach(function(elem) {
 
 --------------------
 
+document.addEventListener('DOMContentLoaded', function () {
+  // do something here ...
+}, false);
+
+--------------------
+
 var x = document.getElementById('example');
 
 var x = document.getElementsByClassName('example');
