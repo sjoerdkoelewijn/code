@@ -21,7 +21,8 @@ h1 {
 
 .mask {
   mask: url(mask.svg);
-  background:red:
+  -webkit-mask: url(mask.svg);
+  background-color:red:
 }
 
 
