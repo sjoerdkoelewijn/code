@@ -17,7 +17,7 @@ h1 {
 }
 
 
-// Use a SVG as a mask. Great for changing the color of single color icons
+/* Use a SVG as a mask. Great for changing the color of single color icons */
 
 .mask {
   mask: url(mask.svg);
@@ -28,6 +28,17 @@ h1 {
 }
 
 
+
+/* Remove all animations and transitions for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /*************************** Blob Mask & Animation ****************************************************************************/
 
