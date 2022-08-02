@@ -95,3 +95,48 @@ if ( ! function_exists( 'roxtar_hex_to_rgb' ) ) {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+// rewrite all post in custom taxonomy ********************************************************************************************
+
+
+function skdd_rewrite_rule() {
+
+	// rewrite 'apple-iphone-11-beeldscherm-reparatie' -> /reparaties/apple/iphone-11/beeldscherm-reparatie/
+
+
+    $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => 10,
+        'product_cat'    => 'reparaties-detail'
+    );
+
+    $loop = new WP_Query( $args );
+
+    while ( $loop->have_posts() ) : $loop->the_post();
+		global $post;
+    	$page_slug = $post->post_name;		
+
+       	$reparatie_slug = explode('-', $page_slug);
+
+		add_rewrite_rule('reparaties/'.$reparatie_slug[0].'/'.$reparatie_slug[1].'-'.$reparatie_slug[2].'/'.$reparatie_slug[3].'-'.$reparatie_slug[4].'', 'index.php?product=' . $page_slug, 'top');
+        
+    endwhile;
+
+    wp_reset_query();
+
+
+ }
+
+ add_action('init', 'skdd_rewrite_rule');
+
+
+// https://webkul.com/blog/create-a-custom-product-type-in-woocommerce/
