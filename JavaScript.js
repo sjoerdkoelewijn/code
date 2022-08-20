@@ -77,5 +77,13 @@ lastScroll = currentScroll;
 
 
 
+// Change selected dropdown data attribute value ----------------------- 
+const totaalPrijs = '999';
+const prijs_select = document.querySelector('.filter[name="service"]');
+const prijs_option = prijs_select.options[prijs_select.selectedIndex];
+prijs_option.setAttribute('data-price', totaalPrijs); 
+
+
+
 
 
